@@ -22,10 +22,7 @@ jobs:
 
       - name: Disable systemctl hooks
         run: bash .github/workflows/scripts/disable-systemctl.sh
-
-      # - name: Pre-create system users and directories
-        # run: bash .github/workflows/scripts/precreate-users.sh
-
+        
       - name: Validate system users and tmpfiles
         run: bash .github/workflows/scripts/validate-tmpfiles.sh
 
