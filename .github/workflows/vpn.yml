@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  ubuntu-vnc:
+  tailscale:
     runs-on: ubuntu-24.04
     timeout-minutes: 3600
 
