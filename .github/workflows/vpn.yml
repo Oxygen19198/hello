@@ -6,7 +6,9 @@ on:
 jobs:
   tailscale:
     runs-on: ubuntu-24.04
-    timeout-minutes: 3600
+    # Free users have only 2,000 minutes GitHub Actions usage - Use them wisely.
+    # We strongly recommended you to cancel the workflow after finishing your work.
+    timeout-minutes: 2000
 
     steps:
       - name: Update APT
@@ -49,6 +51,6 @@ jobs:
       - name: Keep Connection Alive
         run: |
           while true; do
-            echo "[$(date)] VNC Active - Cancel workflow to terminate"
+            echo "[$(date)] Exit Node Active - Cancel workflow to terminate"
             sleep 300
           done
